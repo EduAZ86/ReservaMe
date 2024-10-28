@@ -2,16 +2,38 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const metropolisRegular = localFont({
+  src: "./fonts/Metropolis-Regular.otf",
+  variable: "--font-metropolis-regular",
+  weight: "400",
+})
+const metropolisSemiBold = localFont({
+  src: "./fonts/Metropolis-SemiBold.otf",
+  variable: "--font-metropolis-semibold",
+  weight: "700",
+})
+const metropolisBold = localFont({
+  src: "./fonts/Metropolis-Bold.otf",
+  variable: "--font-metropolis-bold",
+  weight: "900",
+})
+const metropolisLight = localFont({
+  src: "./fonts/Metropolis-Light.otf",
+  variable: "--font-metropolis-light",
+  weight: "300",
+})
+const metropolisExtraLight = localFont({
+  src: "./fonts/Metropolis-ExtraLight.otf",
+  variable: "--font-metropolis-extralight",
+  weight: "200",
+})
+const metropolisRegularItalic = localFont({
+  src: "./fonts/Metropolis-RegularItalic.otf",
+  variable: "--font-metropolis-regular-italic",
+  weight: "400",
+})
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +48,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` 
+          ${metropolisRegular.variable} 
+          ${metropolisSemiBold.variable} 
+          ${metropolisBold.variable} 
+          ${metropolisLight.variable} 
+          ${metropolisExtraLight.variable} 
+          ${metropolisRegularItalic.variable}
+          antialiased`}
       >
         {children}
       </body>
